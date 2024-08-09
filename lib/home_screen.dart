@@ -15,58 +15,48 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Greeting App'),
+        title: const Text('Greeting App'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text(
-                'Hello, World!',
-                style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
-              ),
+            const Text(
+              'Hello, World!',
+              style: TextStyle(
+                  fontSize: 25, color: Colors.red, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
-              child: Text(
-                'Welcome to flutter',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
+            const Text(
+              'Welcome to Flutter!',
+              style: TextStyle(
+                fontSize: 18,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               height: 150,
               width: 150,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/hello.png'),
                   fit: BoxFit.cover, // Adjust the image to cover the container
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green
-                ),
-                onPressed: () {
-                  mySnackBar(context, 'Press me');
-                },
-                child: Text('Press me'),
-              ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              onPressed: () {
+                mySnackBar(context, 'Press me');
+              },
+              child: const Text('Press me'),
             ),
           ],
         ),

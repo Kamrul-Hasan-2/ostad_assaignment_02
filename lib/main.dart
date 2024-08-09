@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'home_screen.dart';
 
-
 void main(){
-  runApp(GreetingApp());
+  runApp(const GreetingApp());
 }
 
 class GreetingApp extends StatelessWidget {
@@ -12,7 +10,7 @@ class GreetingApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomeScreen(),
     );
   }
